@@ -1,467 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
-    <meta charset="UTF-8">
-    <title>bscscan.team – Global Digital Marketplace</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BSCScan Team Marketplace</title>
 
-    <!-- Primary SEO -->
-    <meta name="description" content="bscscan.team is a global digital marketplace for gift cards, virtual Visa & MasterCards, crypto exchange, AI & software licenses, eSIMs, virtual numbers, hardware wallets, and international payments.">
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      font-family: sans-serif;
+      direction: rtl;
+    }
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png">
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      padding: 40px;
+      max-width: 1400px;
+      margin: auto;
+    }
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
+    .card {
+      background: #0d0d0d;
+      border: 1px solid #2a2a2a;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: 0.3s;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
+      text-decoration: none;
+      display: block;
+    }
 
-    <!-- JS -->
-    <script src="main.js" defer></script>
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-title {
+      text-align: center;
+      padding: 15px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  </style>
 </head>
 
-<body class="theme-dark">
+<body>
 
-<header class="site-header">
-    <div class="container header-inner">
+  <div class="grid">
 
-        <div class="brand">
-            <a href="/" class="brand-link">
-                <img src="logo-bs-gold.png" alt="bscscan.team logo" class="brand-logo">
-                <div class="brand-text">
-                    <span class="brand-name">bscscan.team</span>
-                    <span class="brand-tagline">Global Digital Marketplace</span>
-                </div>
-            </a>
-        </div>
+    <a class="card" href="#">
+      <img src="./gift.png" alt="Gift Cards">
+      <div class="card-title">Gift Cards</div>
+    </a>
 
-        <nav class="main-nav">
-            <ul class="nav-list">
-                <li><a href="#gift-cards">Gift Cards</a></li>
-                <li><a href="#crypto-exchange">Buy & Sell Crypto</a></li>
-                <li><a href="#cards">Visa & MasterCard</a></li>
-                <li><a href="#licenses">Licenses & Accounts</a></li>
-                <li><a href="#esim">eSIM & Numbers</a></li>
-                <li><a href="#wallets">Hardware Wallets</a></li>
-                <li><a href="#payments">International Payments</a></li>
-            </ul>
-        </nav>
+    <a class="card" href="#">
+      <img src="./virtual-card.png" alt="Virtual Cards">
+      <div class="card-title">Virtual Visa & MasterCard</div>
+    </a>
 
-        <div class="header-actions">
+    <a class="card" href="#">
+      <img src="./crypto.png" alt="Crypto">
+      <div class="card-title">Crypto Buy/Sell/Swap</div>
+    </a>
 
-            <div class="social-header">
-                <a href="https://t.me/bsc_card" target="_blank" class="social-link">TG</a>
-                <a href="https://wa.me/447552847468" target="_blank" class="social-link">WA</a>
-                <a href="https://x.com/bsccard1" target="_blank" class="social-link">X</a>
-            </div>
+    <a class="card" href="#">
+      <img src="./ai-software.png" alt="AI Software">
+      <div class="card-title">AI & Software Licenses</div>
+    </a>
 
-            <div class="auth-buttons">
-                <a href="/login" class="btn btn-outline">Log in</a>
-                <a href="/register" class="btn btn-primary">Sign up</a>
-            </div>
+    <a class="card" href="#">
+      <img src="./esim.png" alt="eSIM">
+      <div class="card-title">eSIM & Virtual Numbers</div>
+    </a>
 
-            <a href="/cart" class="cart-button">
-                <span class="cart-icon">🛒</span>
-                <span class="cart-count" data-cart-count>0</span>
-            </a>
+    <a class="card" href="#">
+      <img src="./hardware-wallet.png" alt="Hardware Wallet">
+      <div class="card-title">Hardware Wallets</div>
+    </a>
 
-        </div>
-    </div>
-</header>
+    <a class="card" href="#">
+      <img src="./premium.png" alt="Premium Accounts">
+      <div class="card-title">Premium Accounts</div>
+    </a>
 
-<main>
+    <a class="card" href="#">
+      <img src="./international.png" alt="International Payments">
+      <div class="card-title">International Payments</div>
+    </a>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="container hero-inner">
-            <div class="hero-content">
-                <h1>Cards, crypto, licenses & telecom – in one global marketplace.</h1>
-                <p>
-                    bscscan.team connects you to a full digital infrastructure: gift cards, virtual Visa & MasterCards, 
-                    crypto exchange, AI & software licenses, eSIMs, virtual numbers, hardware wallets and international payments.
-                </p>
-
-                <div class="hero-actions">
-                    <a href="#gift-cards" class="btn btn-primary">Start shopping</a>
-                    <a href="#crypto-exchange" class="btn btn-secondary">Buy & sell crypto</a>
-                </div>
-
-                <div class="hero-trust">
-                    <span>Global coverage • Multi-currency payments • Crypto friendly</span>
-                </div>
-            </div>
-
-            <div class="hero-highlight">
-                <div class="hero-card">
-                    <h2>All-in-one global digital store</h2>
-                    <ul>
-                        <li>Gift cards & wallet top-ups</li>
-                        <li>Virtual Visa & MasterCard</li>
-                        <li>Crypto buy, sell & swap</li>
-                        <li>AI & software licenses</li>
-                        <li>eSIM & virtual numbers</li>
-                        <li>Hardware wallets & more</li>
-                    </ul>
-                    <a href="/products" class="btn btn-ghost">View all services</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TRUST -->
-    <section class="trust-section">
-        <div class="container trust-inner">
-            <div class="trust-item">
-                <h3>Global presence</h3>
-                <p>Registered business presence across the UK, US, EU, UAE, Turkey and Canada.</p>
-            </div>
-            <div class="trust-item">
-                <h3>Multi‑method payments</h3>
-                <p>Support for card payments, crypto payments and account funding workflows.</p>
-            </div>
-            <div class="trust-item">
-                <h3>Verified delivery</h3>
-                <p>Tracked orders, clear SLAs and verified digital delivery for each service category.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- GIFT CARDS -->
-    <section id="gift-cards" class="section section-alt">
-        <div class="container">
-            <header class="section-header">
-                <h2>Gift Cards & Wallet Top‑Ups</h2>
-                <p>Instant delivery of global gift cards and digital balances.</p>
-            </header>
-
-            <div class="grid grid-4">
-                <article class="card product-card">
-                    <h3>Apple & iTunes</h3>
-                    <p>Instant Apple balance for apps and subscriptions.</p>
-                    <a href="/products/apple" class="btn btn-small btn-primary">View options</a>
-                </article>
-
-                <article class="card product-card">
-                    <h3>Google Play</h3>
-                    <p>Top‑up your Google Play balance.</p>
-                    <a href="/products/google-play" class="btn btn-small btn-primary">View options</a>
-                </article>
-
-                <article class="card product-card">
-                    <h3>Amazon & retail</h3>
-                    <p>Amazon, Walmart, Target and more.</p>
-                    <a href="/products/retail" class="btn btn-small btn-primary">View options</a>
-                </article>
-
-                <article class="card product-card">
-                    <h3>Gaming & entertainment</h3>
-                    <p>Steam, PlayStation, Xbox, Netflix, Spotify.</p>
-                    <a href="/products/gaming" class="btn btn-small btn-primary">View options</a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- CRYPTO EXCHANGE -->
-    <section id="crypto-exchange" class="section">
-        <div class="container">
-            <header class="section-header">
-                <h2>Buy & Sell Crypto</h2>
-                <p>Fast and secure crypto exchange with global support.</p>
-            </header>
-
-            <div class="grid grid-3">
-                <article class="card service-card">
-                    <h3>Buy crypto</h3>
-                    <p>Purchase USDT, BTC, ETH, BNB, TRX and more.</p>
-                    <a href="/services/buy-crypto" class="btn btn-small btn-primary">Buy crypto</a>
-                </article>
-
-                <article class="card service-card">
-                    <h3>Sell crypto</h3>
-                    <p>Sell your crypto and receive payouts.</p>
-                    <a href="/services/sell-crypto" class="btn btn-small btn-primary">Sell crypto</a>
-                </article>
-
-                <article class="card service-card">
-                    <h3>Crypto swap</h3>
-                    <p>Convert between major coins and stablecoins.</p>
-                    <a href="/services/swap" class="btn btn-small btn-secondary">Swap crypto</a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- CARDS -->
-    <section id="cards" class="section section-alt">
-        <div class="container">
-            <header class="section-header">
-                <h2>Virtual Visa & MasterCard</h2>
-                <p>Verified virtual cards for online shopping and subscriptions.</p>
-            </header>
-
-            <div class="grid grid-3">
-                <article class="card product-card">
-                    <h3>Virtual Visa</h3>
-                    <p>One‑time and reloadable Visa cards.</p>
-                    <a href="/products/virtual-visa" class="btn btn-small btn-primary">View details</a>
-                </article>
-
-                <article class="card product-card">
-                    <h3>Virtual MasterCard</h3>
-                    <p>Premium MasterCard options.</p>
-                    <a href="/products/virtual-mastercard" class="btn btn-small btn-primary">View details</a>
-                </article>
-
-                <article class="card product-card">
-                    <h3>Cards for Ads & SaaS</h3>
-                    <p>Optimized for Google Ads, Meta Ads and SaaS.</p>
-                    <a href="/products/ads-cards" class="btn btn-small btn-secondary">View details</a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- CRYPTO PAYMENTS -->
-    <section id="crypto-payments" class="section">
-        <div class="container">
-            <header class="section-header">
-                <h2>Crypto Payments</h2>
-                <p>Pay for any service using your favorite cryptocurrencies.</p>
-            </header>
-
-            <div class="grid grid-2">
-                <article class="card service-card">
-                    <h3>Supported assets</h3>
-                    <p>USDT (TRC20, ERC20, BEP20), BTC, ETH, BNB, TRX.</p>
-                </article>
-
-                <article class="card service-card">
-                    <h3>How it works</h3>
-                    <p>Select crypto at checkout and send to the provided address.</p>
-                    <a href="/payments/crypto" class="btn btn-small btn-secondary">Learn more</a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- LICENSES -->
-    <section id="licenses" class="section section-alt">
-        <div class="container">
-            <header class="section-header">
-                <h2>Licenses, AI Accounts & Premium Services</h2>
-                <p>AI subscriptions, software licenses and premium accounts.</p>
-            </header>
-
-            <div class="grid grid-3">
-                <article class="card product-card">
-                    <h3>AI & LLM licenses</h3>
-                    <p>ChatGPT Plus, Midjourney, Claude, Gemini.</p>
-                    <a href="/products/ai" class="btn btn-small btn-primary">View licenses</a>
-                </article>
-
-                <article class="card product-card">
-                    <h3>Software licenses</h3>
-                    <p>Windows, Office, Adobe, Autodesk, VPN.</p>
-                    <a href="/products/software" class="btn btn-small btn-primary">View licenses</a>
-                </article>
-
-                <article class="card product-card">
-                    <h3>Premium accounts</h3>
-                    <p>Google Workspace, streaming, productivity tools.</p>
-                    <a href="/products/premium" class="btn btn-small btn-secondary">View accounts</a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- ESIM -->
-    <section id="esim" class="section">
-        <div class="container">
-            <header class="section-header">
-                <h2>eSIM & Virtual Numbers</h2>
-                <p>Global eSIM plans and verified virtual numbers.</p>
-            </header>
-
-            <div class="grid grid-3">
-                <article class="card product-card">
-                    <h3>Global eSIM</h3>
-                    <p>Plans for Europe, USA, Middle East and more.</p>
-                    <a href="/products/esim" class="btn btn-small btn-primary">View plans</a>
-                </article>
-
-                <article class="card product-card">
-                    <h3>Virtual numbers</h3>
-                    <p>Numbers from 80+ countries.</p>
-                    <a href="/products/numbers" class="btn btn-small btn-primary">View numbers</a>
-                </article>
-
-                <article class="card product-card">
-                    <h3>Business lines</h3>
-                    <p>Google Voice and business-ready numbers.</p>
-                    <a href="/products/business-lines" class="btn btn-small btn-secondary">View solutions</a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- HARDWARE WALLETS -->
-    <section id="wallets" class="section section-alt">
-        <div class="container">
-            <header class="section-header">
-                <h2>Hardware Wallets</h2>
-                <p>Secure devices for long‑term crypto storage.</p>
-            </header>
-
-            <div class="grid grid-3">
-                <article class="card product-card">
-                    <h3>Ledger devices</h3>
-                    <p>Ledger Nano S Plus and Nano X.</p>
-                    <a href="/products/ledger" class="btn btn-small btn-primary">View devices</a>
-                </article>
-
-                <article class="card product-card">
-                    <h3>Trezor & others</h3>
-                    <p>Trezor One, Trezor T, SafePal.</p>
-                    <a href="/products/trezor" class="btn btn-small btn-secondary">View devices</a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- PAYMENTS -->
-    <section id="payments" class="section">
-        <div class="container">
-            <header class="section-header">
-                <h2>International Payments & Business Services</h2>
-                <p>Handle global payments and business needs.</p>
-            </header>
-
-            <div class="grid grid-3">
-                <article class="card service-card">
-                    <h3>International payments</h3>
-                    <p>Exam fees, embassy fees, university payments.</p>
-                    <a href="/services/international" class="btn btn-small btn-primary">More details</a>
-                </article>
-
-                <article class="card service-card">
-                    <h3>Account funding</h3>
-                    <p>Top‑up PayPal, Skrill, Wise, Payoneer.</p>
-                    <a href="/services/funding" class="btn btn-small btn-primary">More details</a>
-                </article>
-
-                <article class="card service-card">
-                    <h3>Business services</h3>
-                    <p>Company accounts and digital operations.</p>
-                    <a href="/services/business" class="btn btn-small btn-secondary">More details</a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section section-cta">
-        <div class="container cta-inner">
-            <h2>Ready to place your first order?</h2>
-            <p>Create your account, add services to your cart and pay with cards or crypto.</p>
-
-            <div class="cta-actions">
-                <a href="/register" class="btn btn-primary">Create account</a>
-                <a href="/cart" class="btn btn-secondary">View cart</a>
-            </div>
-        </div>
-    </section>
-
-</main>
-
-<footer class="site-footer">
-
-    <div class="container footer-inner">
-
-        <!-- Column 1 -->
-        <div class="footer-column footer-brand">
-            <div class="footer-logo-wrap">
-                <img src="logo-bs-footer.png" alt="bscscan.team logo" class="footer-logo">
-                <div class="footer-brand-text">
-                    <span class="footer-brand-name">bscscan.team</span>
-                    <span class="footer-brand-tagline">Global Digital Marketplace</span>
-                </div>
-            </div>
-
-            <div class="footer-offices">
-                <h3>Global Offices</h3>
-                <ul>
-                    <li><strong>United Kingdom (HQ)</strong><br>71-75 Shelton Street, London, WC2H 9JQ</li>
-                    <li><strong>United States</strong><br>447 Broadway, New York, NY 10013</li>
-                    <li><strong>United Arab Emirates</strong><br>Bay Square, Business Bay, Dubai</li>
-                    <li><strong>Germany (EU)</strong><br>Friedrichstraße 171, Berlin</li>
-                    <li><strong>Turkey</strong><br>Şişli, Istanbul</li>
-                    <li><strong>Canada</strong><br>150 King St W, Toronto</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Column 2 -->
-        <div class="footer-column">
-            <h3>Services</h3>
-            <ul>
-                <li><a href="#gift-cards">Gift cards & wallets</a></li>
-                <li><a href="#crypto-exchange">Buy & sell crypto</a></li>
-                <li><a href="#cards">Virtual Visa & MasterCard</a></li>
-                <li><a href="#licenses">Licenses & accounts</a></li>
-                <li><a href="#esim">eSIM & virtual numbers</a></li>
-                <li><a href="#wallets">Hardware wallets</a></li>
-                <li><a href="#payments">International payments</a></li>
-                <li><a href="/services/business">Business services</a></li>
-            </ul>
-
-            <h3>Platform</h3>
-            <ul>
-                <li><a href="/login">Login</a></li>
-                <li><a href="/register">Create account
-                <li><a href="/register">Create account</a></li>
-                <li><a href="/cart">Cart</a></li>
-                <li><a href="/checkout">Checkout</a></li>
-                <li><a href="/orders">Order tracking</a></li>
-                <li><a href="/support">Support center</a></li>
-            </ul>
-        </div>
-
-        <!-- Column 3 -->
-        <div class="footer-column">
-            <h3>Contact & Support</h3>
-            <ul class="contact-list">
-                <li><strong>WhatsApp:</strong> <a href="https://wa.me/447552847468" target="_blank">+44 7552 847468</a></li>
-                <li><strong>Telegram:</strong> <a href="https://t.me/bsc_card" target="_blank">@bsc_card</a></li>
-                <li><strong>X (Twitter):</strong> <a href="https://x.com/bsccard1" target="_blank">@bsccard1</a></li>
-                <li><strong>Email (Info):</strong> <a href="mailto:info@bscscan.team">info@bscscan.team</a></li>
-                <li><strong>Email (Support):</strong> <a href="mailto:support-as@bscscan.team">support-as@bscscan.team</a></li>
-            </ul>
-
-            <h3>Legal</h3>
-            <ul>
-                <li><a href="/legal/terms">Terms & Conditions</a></li>
-                <li><a href="/legal/privacy">Privacy Policy</a></li>
-                <li><a href="/legal/compliance">Compliance</a></li>
-            </ul>
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-        <div class="container footer-bottom-inner">
-            <span>© <span id="current-year"></span> bscscan.team. All rights reserved.</span>
-            <span>Global payments • Crypto friendly • Multi‑language • BS Hexagon Identity</span>
-        </div>
-    </div>
-
-</footer>
-
-<!-- Floating Buttons -->
-<a href="https://wa.me/447552847468" target="_blank" class="fab fab-whatsapp">WA</a>
-<a href="https://t.me/bsc_card" target="_blank" class="fab fab-telegram">TG</a>
-
-<script>
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-</script>
+  </div>
 
 </body>
 </html>
