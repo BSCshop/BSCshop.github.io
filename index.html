@@ -12,34 +12,54 @@
 <body>
 
   <!-- NAVBAR -->
-  <div class="navbar">
+  <header class="navbar">
 
-    <div class="nav-left">
-      <div class="logo">BSCScan Team</div>
-    </div>
+    <div class="logo">BSCScan Team</div>
 
-    <div class="nav-center">
+    <!-- Desktop Menu -->
+    <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="gift.html">Products</a>
       <a href="international.html">International Payments</a>
       <a href="contact.html">Contact</a>
-    </div>
+    </nav>
 
-    <div class="nav-right">
+    <!-- Auth Buttons -->
+    <div class="auth-buttons">
       <a href="login.html" class="login-btn">Login</a>
       <a href="signup.html" class="signup-btn">Sign Up</a>
     </div>
 
+    <!-- Mobile Menu Button -->
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="gift.html">Products</a>
+    <a href="international.html">International Payments</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html" class="mobile-login">Login</a>
+    <a href="signup.html" class="mobile-signup">Sign Up</a>
   </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("open");
+    }
+  </script>
 
   <!-- HEADER -->
-  <div class="header">
+  <section class="header">
     <h1>Marketplace</h1>
     <p>Digital services, virtual cards, international payments, licenses, and more</p>
-  </div>
+  </section>
 
   <!-- CATEGORY GRID -->
-  <div class="grid">
+  <section class="grid">
 
     <a class="card" href="gift.html">
       <img src="./gift.PNG">
@@ -81,12 +101,12 @@
       <div class="card-title">International Payments</div>
     </a>
 
-  </div>
+  </section>
 
   <!-- FOOTER -->
-  <div class="footer">
+  <footer class="footer">
     © 2025 BSCScan Team — All Rights Reserved
-  </div>
+  </footer>
 
 </body>
 </html>
