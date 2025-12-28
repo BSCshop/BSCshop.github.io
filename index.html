@@ -1,22 +1,106 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BSCScan Team Marketplace</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
       background: #000;
-      font-family: sans-serif;
-      direction: rtl;
+      font-family: 'Inter', sans-serif;
+      color: #fff;
     }
 
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: #0d0d0d;
+      border-bottom: 1px solid #222;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #ffd700, #ffb300);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links a {
+      margin-left: 25px;
+      color: #ccc;
+      text-decoration: none;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #ffd700;
+    }
+
+    .auth-buttons a {
+      margin-left: 15px;
+      padding: 8px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .login-btn {
+      border: 1px solid #ffd700;
+      color: #ffd700;
+    }
+
+    .login-btn:hover {
+      background: #ffd700;
+      color: #000;
+    }
+
+    .signup-btn {
+      background: #ffd700;
+      color: #000;
+    }
+
+    .signup-btn:hover {
+      background: #ffb300;
+    }
+
+    /* HEADER */
+    .header {
+      text-align: center;
+      padding: 60px 20px 20px;
+    }
+
+    .header h1 {
+      font-size: 40px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #ffd700, #ffb300);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      font-size: 17px;
+      opacity: 0.7;
+    }
+
+    /* GRID */
     .grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 30px;
+      gap: 35px;
       padding: 40px;
       max-width: 1400px;
       margin: auto;
@@ -25,42 +109,65 @@
     .card {
       background: #0d0d0d;
       border: 1px solid #2a2a2a;
-      border-radius: 16px;
+      border-radius: 18px;
       overflow: hidden;
-      transition: 0.3s;
-      box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
+      transition: 0.35s ease;
       text-decoration: none;
       display: block;
     }
 
     .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+      transform: translateY(-8px);
+      box-shadow: 0 0 35px rgba(255, 215, 0, 0.45);
+      border-color: #ffd700;
     }
 
     .card img {
       width: 100%;
-      height: 180px;
+      height: 200px;
       object-fit: cover;
+      border-bottom: 1px solid #222;
     }
 
     .card-title {
       text-align: center;
-      padding: 15px;
-      color: #fff;
+      padding: 18px;
       font-size: 18px;
-      font-weight: bold;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 0.5px;
     }
 
-    @media (max-width: 900px) {
+    /* FOOTER */
+    .footer {
+      margin-top: 60px;
+      padding: 40px;
+      background: #0d0d0d;
+      border-top: 1px solid #222;
+      text-align: center;
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1100px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 800px) {
       .grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 500px) {
       .grid {
         grid-template-columns: repeat(1, 1fr);
+      }
+      .header h1 {
+        font-size: 30px;
       }
     }
   </style>
@@ -68,48 +175,77 @@
 
 <body>
 
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="logo">BSCScan Team</div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="gift.html">Products</a>
+      <a href="international.html">International Payments</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="auth-buttons">
+      <a href="login.html" class="login-btn">Login</a>
+      <a href="signup.html" class="signup-btn">Sign Up</a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Marketplace</h1>
+    <p>Digital services, virtual cards, international payments, licenses, and more</p>
+  </div>
+
+  <!-- CATEGORY GRID -->
   <div class="grid">
 
-    <a class="card" href="#">
-      <img src="./gift.PNG" alt="Gift Cards">
+    <a class="card" href="gift.html">
+      <img src="./gift.PNG">
       <div class="card-title">Gift Cards</div>
     </a>
 
-    <a class="card" href="#">
-      <img src="./virtual-card.PNG" alt="Virtual Cards">
+    <a class="card" href="virtual-card.html">
+      <img src="./virtual-card.PNG">
       <div class="card-title">Virtual Visa & MasterCard</div>
     </a>
 
-    <a class="card" href="#">
-      <img src="./crypto.PNG" alt="Crypto">
+    <a class="card" href="crypto.html">
+      <img src="./crypto.PNG">
       <div class="card-title">Crypto Buy/Sell/Swap</div>
     </a>
 
-    <a class="card" href="#">
-      <img src="./ai-software.PNG" alt="AI Software">
+    <a class="card" href="ai-software.html">
+      <img src="./ai-software.PNG">
       <div class="card-title">AI & Software Licenses</div>
     </a>
 
-    <a class="card" href="#">
-      <img src="./esim.PNG" alt="eSIM">
+    <a class="card" href="esim.html">
+      <img src="./esim.PNG">
       <div class="card-title">eSIM & Virtual Numbers</div>
     </a>
 
-    <a class="card" href="#">
-      <img src="./hardware-wallet.PNG" alt="Hardware Wallet">
+    <a class="card" href="hardware-wallet.html">
+      <img src="./hardware-wallet.PNG">
       <div class="card-title">Hardware Wallets</div>
     </a>
 
-    <a class="card" href="#">
-      <img src="./premium.PNG" alt="Premium Accounts">
+    <a class="card" href="premium.html">
+      <img src="./premium.PNG">
       <div class="card-title">Premium Accounts</div>
     </a>
 
-    <a class="card" href="#">
-      <img src="./international.PNG" alt="International Payments">
+    <a class="card" href="international.html">
+      <img src="./international.PNG">
       <div class="card-title">International Payments</div>
     </a>
 
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    © 2025 BSCScan Team — All Rights Reserved
   </div>
 
 </body>
